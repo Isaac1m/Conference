@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-3">
+        <strong>Title: </strong>
+    </div>
+    <div class="col-md-9">{{ session.title}}</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <strong>Speaker: </strong>
+    </div>
+    <div class="col-md-9">{{ session.speaker}}</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <strong>abstract: </strong>
+    </div>
+    <div class="col-md-9">{{ session.abstract}}</div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <strong>Track: </strong>
+    </div>
+    <div class="col-md-9">{{ session.track}}</div>
+</div>
+
+<div class="row">
+    <p>
+        <div class="col-md-3 col-md-offset-3">
+
+             <a href="{% url 'app:session_list' %}"> <<< return to list</a>
+
+        </div>
+    </p>
+
+</div>
+{% endblock %}
